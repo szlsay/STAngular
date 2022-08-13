@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sthome',
@@ -6,6 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sthome.component.less']
 })
 export class STHomeComponent implements OnInit {
+  @Input()
+  name!: String
+
+  @Output()
+  outLogin = new EventEmitter()
+
+  handlerOutLogin(){
+    this.outLogin.emit('用户退出')
+  }
 
   constructor() { }
 

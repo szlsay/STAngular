@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-stlogin',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stlogin.component.less']
 })
 export class STLoginComponent implements OnInit {
-
+  handleOutLogin(str: String) { 
+    console.log(str)
+  }
   constructor() { }
   ngOnChanges(): void {
     console.log('stlogin-ngOnChanges');
