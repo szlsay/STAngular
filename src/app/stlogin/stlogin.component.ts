@@ -8,8 +8,25 @@ import { Component, OnInit } from '@angular/core';
 export class STLoginComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit(): void {
+  ngOnChanges(): void {
+    console.log('stlogin-ngOnChanges');
   }
-
+  ngOnInit(): void {
+    console.log('stlogin-ngOnInit');
+  }
+  ngDoCheck(): void {
+    console.log('stlogin-ngDoCheck');
+  }
+  ngAfterContentInit(): void {
+    console.log('stlogin-ngAfterContentInit');
+  }
+  ngAfterViewInit(): void {
+    console.log('stlogin-ngAfterViewInit');
+  }
+  ngAfterViewChecked(): void {
+    console.log('stlogin-ngAfterViewChecked');
+  }
+  ngOnDestroy(): void {
+    console.log('stlogin-ngOnDestroy');
+  }
 }
