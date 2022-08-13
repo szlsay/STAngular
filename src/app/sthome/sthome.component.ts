@@ -12,6 +12,11 @@ export class STHomeComponent implements OnInit {
   @Output()
   outLogin = new EventEmitter()
 
+  age: number = 18
+  isHome: boolean = true
+  desc: string = '世界和平'
+  date: Date = new Date()
+
   handlerOutLogin(){
     this.outLogin.emit('用户退出')
   }
