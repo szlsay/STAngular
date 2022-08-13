@@ -3,3 +3,29 @@
 <hr>
 {{age}}{{isHome}}{{desc}}{{date}}
 {{1+1}}
+<hr>
+<!-- 属性绑定使用的语法是[属性名]  -->
+<div [id]="'box'">属性绑定</div>
+<div [id]="box">属性绑定</div>
+
+<!-- class渲染方式 -->
+<!-- 单一类绑定 -->
+<p [class]="'item'">class绑定</p>
+<p [class]="itemClass">class绑定</p>
+<p [class.itemClass]="true">class绑定</p>
+
+<h3 [class]="homeClasses">多类名绑定</h3>
+<h3 [class]="{'h3-dom':false,'title-dom':true}">类名条件渲染</h3>
+<h3 [class]="['h3-dom','title-dom']">class数组渲染</h3>
+<h3 [ngClass]="{'active': isActive}">ngClass绑定</h3>
+
+<!-- 样式绑定 -->
+<h3 [style.width]="'300px'">单一样式绑定</h3>
+<h3 [style.color]="'red'">单一样式绑定</h3>
+<h3 [style.width.px]="'300'">单一样式绑定</h3>
+
+<h3 [style]="'background:red;color:#fff'">多样式绑定</h3>
+<h3 [style]="{'background':'red','color':'#fff'}">多样式绑定</h3>
+
+<h3 [ngStyle]="{'color': 'red'}">ngStyle样式绑定</h3>
+<h3 [ngStyle]="{'font-size': !isMax ? '24px' : '12px'}">ngStyle样式绑定</h3>

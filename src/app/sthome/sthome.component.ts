@@ -17,6 +17,14 @@ export class STHomeComponent implements OnInit {
   desc: string = '世界和平'
   date: Date = new Date()
 
+  box: String = 'home-box'
+  itemClass: String = 'home-item'
+
+  homeClasses: String = 'h3-dom title-dom'
+  isActive: boolean = true
+
+  isMax: boolean = true
+  
   handlerOutLogin(){
     this.outLogin.emit('用户退出')
   }
