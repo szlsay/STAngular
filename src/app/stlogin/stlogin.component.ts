@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-stlogin',
@@ -6,8 +6,13 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./stlogin.component.less']
 })
 export class STLoginComponent implements OnInit {
+  @ViewChild('myHome')
+  home: any;
+
   handleOutLogin(str: String) { 
     console.log(str)
+    console.log(this.home);
+    console.log(this.home.name);
   }
   constructor() { }
   ngOnChanges(): void {
