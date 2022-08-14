@@ -42,6 +42,9 @@ export class STHomeComponent implements OnInit {
     password:''
   };
 
+  dateStr: Date = new Date();
+  nameStr: string = 'hEllo';
+
   constructor(private fbCustom: FormBuilder) { }
   valiDataForm:FormGroup = this.fbCustom.group({
     userName: ['', [Validators.required,

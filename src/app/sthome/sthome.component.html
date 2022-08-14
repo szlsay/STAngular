@@ -141,3 +141,8 @@
   <button (click)="subvaliDataFormFun()">提交</button>
 </form>
 <hr>
+<!-- 管道 -->
+{{dateStr}}
+<p>{{dateStr | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+<p>{{nameStr | uppercase | lowercase}}</p>
+<p>{{nameStr | test}}</p>

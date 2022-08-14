@@ -8,6 +8,7 @@ import { STLoginComponent } from './stlogin/stlogin.component';
 import { STHomeComponent } from './sthome/sthome.component';
 import { STListComponent } from './stlist/stlist.component';
 import { STDetailComponent } from './stdetail/stdetail.component';
+import { TestPipe } from './pipes/test.pipe';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { STDetailComponent } from './stdetail/stdetail.component';
     STLoginComponent,
     STHomeComponent,
     STListComponent,
-    STDetailComponent
+    STDetailComponent,
+    TestPipe
   ],
   //引入模块需要的类
   imports: [
