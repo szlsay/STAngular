@@ -22,7 +22,7 @@ import { STLayoutComponent } from './stlayout/stlayout.component';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
-
+import { NzIconModule } from 'ng-zorro-antd/icon';
 registerLocaleData(zh);
 
 
@@ -49,7 +49,8 @@ registerLocaleData(zh);
     BrowserAnimationsModule,
     NzLayoutModule,
     NzMenuModule,
-    NzBreadCrumbModule
+    NzBreadCrumbModule,
+    NzIconModule
   ],
   //全局服务
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],

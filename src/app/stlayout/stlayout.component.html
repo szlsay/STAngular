@@ -1,31 +1,21 @@
 <nz-layout>
-  <nz-sider nzCollapsible nzWidth="200px">
-    <div class="logo"></div>
+  <nz-sider nzWidth="160px">
+    <div class="logo">
+      <img class="icon">
+      <div class="title">管理信息系统</div>
+    </div>
     <ul nz-menu nzTheme="dark" nzMode="inline">
       <li nz-menu-item>
-        <i nz-icon nzType="pie-chart"></i>
-        <span>Option 1</span>
+        <i nz-icon nzType="home" nzTheme="outline"></i>
+        <span>系统首页</span>
       </li>
       <li nz-menu-item>
-        <i nz-icon nzType="desktop"></i>
-        <span>Option 2</span>
-      </li>
-      <li nz-submenu nzTitle="User" nzIcon="user">
-        <ul>
-          <li nz-menu-item>Tom</li>
-          <li nz-menu-item>Bill</li>
-          <li nz-menu-item>Alex</li>
-        </ul>
-      </li>
-      <li nz-submenu nzTitle="Team" nzIcon="team">
-        <ul>
-          <li nz-menu-item>Team 1</li>
-          <li nz-menu-item>Team 2</li>
-        </ul>
+        <i nz-icon nzType="file-text" nzTheme="outline"></i>
+        <span>订单管理</span>
       </li>
       <li nz-menu-item>
-        <i nz-icon nzType="file"></i>
-        <span>File</span>
+        <i nz-icon nzType="user" nzTheme="outline"></i>
+        <span>用户管理</span>
       </li>
     </ul>
   </nz-sider>
@@ -33,11 +23,11 @@
     <nz-header></nz-header>
     <nz-content>
       <nz-breadcrumb>
-        <nz-breadcrumb-item>User</nz-breadcrumb-item>
-        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+        <nz-breadcrumb-item>系统首页</nz-breadcrumb-item>
+        <nz-breadcrumb-item>用户管理</nz-breadcrumb-item>
       </nz-breadcrumb>
       <div class="inner-content">Bill is a cat.</div>
     </nz-content>
-    <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+    <nz-footer>ST By Angular</nz-footer>
   </nz-layout>
 </nz-layout>
