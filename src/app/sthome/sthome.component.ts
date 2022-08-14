@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ListService } from '../serves/list.service';
 
 @Component({
   selector: 'app-sthome',
@@ -45,7 +46,7 @@ export class STHomeComponent implements OnInit {
   dateStr: Date = new Date();
   nameStr: string = 'hEllo';
 
-  constructor(private fbCustom: FormBuilder) { }
+  constructor(private fbCustom: FormBuilder, private listService:ListService) { }
   valiDataForm:FormGroup = this.fbCustom.group({
     userName: ['', [Validators.required,
       Validators.maxLength(18),
@@ -75,7 +76,10 @@ export class STHomeComponent implements OnInit {
     console.log(this.valiDataForm.get('userName'));
   }
 
+  list:Array<string> | undefined
   ngOnInit(): void {
+    console.log('sthome-ngOnInit')
+    this.list = this.listService.getList()
   }
 
   handlerOutLogin(){
