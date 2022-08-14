@@ -23,7 +23,7 @@ export class STHomeComponent implements OnInit {
   homeClasses: String = 'h3-dom title-dom'
   isActive: boolean = true
 
-  isMax: boolean = true
+  isMax: boolean = false
   
   handlerOutLogin(){
     this.outLogin.emit('用户退出')

@@ -29,3 +29,19 @@
 
 <h3 [ngStyle]="{'color': 'red'}">ngStyle样式绑定</h3>
 <h3 [ngStyle]="{'font-size': !isMax ? '24px' : '12px'}">ngStyle样式绑定</h3>
+
+<!-- 条件判断语法 -->
+<div *ngIf="isMax">isMax==true</div>
+<div *ngIf="!isMax">isMax==false</div>
+
+<!-- 解析完 -->
+<ng-template [ngIf]="isMax">
+  <div>isMax==true</div>
+</ng-template>
+<hr>
+<ng-container *ngIf="isMax; else elseTemplate">
+  <div>isMax==true</div>
+</ng-container>
+<ng-template #elseTemplate>
+  <div>isMax==false</div>
+</ng-template>
