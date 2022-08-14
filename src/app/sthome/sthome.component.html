@@ -74,3 +74,17 @@
     type!=1&& type!=2
   </p>
 </div>
+
+<!-- 事件绑定  (事件类型) = "执行函数" -->
+<input type="text" (input)="inpChange($event)">
+<button (click)="clickFun($event)">点击</button>
+<hr>
+<!-- 模板引用变量 -->
+<input #userName type="text" placeholder="请输入用户名">
+<button (click)="getUserName(userName.value)">获取userName</button>
+<span>{{userName.value}}</span>
+<hr>
+<!-- 双向绑定 ngModel只对表单元素有效 -->
+<input [(ngModel)]="titlemodel" type="text">
+<p>标题:{{titlemodel}}</p>
+<hr>

@@ -27,13 +27,27 @@ export class STHomeComponent implements OnInit {
 
   colors:Array<string> = [ 'red', 'blue', 'yellow', 'green' ];
   type:Number = 4
-  handlerOutLogin(){
-    this.outLogin.emit('用户退出')
-  }
 
+  titlemodel:String = ''
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  handlerOutLogin(){
+    this.outLogin.emit('用户退出')
+  }
+
+  clickFun(e:Event){
+    console.log(e)
+    alert("点击了按钮")
+  }
+
+  inpChange(e:any){
+    console.log(e.target.value)
+  }
+
+  getUserName(v:string){
+    console.log(v)
+  }
 }
