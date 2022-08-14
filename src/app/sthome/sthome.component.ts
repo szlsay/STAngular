@@ -24,7 +24,9 @@ export class STHomeComponent implements OnInit {
   isActive: boolean = true
 
   isMax: boolean = false
-  
+
+  colors:Array<string> = [ 'red', 'blue', 'yellow', 'green' ];
+  type:Number = 4
   handlerOutLogin(){
     this.outLogin.emit('用户退出')
   }

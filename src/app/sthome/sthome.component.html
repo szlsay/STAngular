@@ -45,3 +45,32 @@
 <ng-template #elseTemplate>
   <div>isMax==false</div>
 </ng-template>
+
+<!-- 循环语句 -->
+<!-- for -->
+<div *ngFor="let item of colors let in=index let isOdd=odd">
+  {{isOdd}}
+  {{in}}
+  {{item}}
+</div>
+<hr>
+<ng-template ngFor let-color [ngForOf]="colors" let-i="index" let-odd="odd">
+  <div>{{odd}} {{i}} {{color}}</div>
+</ng-template>
+<hr>
+<ng-template ngFor [ngForOf]="colors" let-color let-i="index" let-odd="odd">
+  <div>{{odd}} {{i}} {{color}}</div>
+</ng-template>
+
+<!-- Switch -->
+<div [ngSwitch]="type">
+  <p *ngSwitchCase="1">
+    type=1
+  </p>
+  <p *ngSwitchCase="2">
+    type=2
+  </p>
+  <p *ngSwitchDefault>
+    type!=1&& type!=2
+  </p>
+</div>
