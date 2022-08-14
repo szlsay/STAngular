@@ -88,3 +88,21 @@
 <input [(ngModel)]="titlemodel" type="text">
 <p>标题:{{titlemodel}}</p>
 <hr>
+<!-- 动态表单控件 -->
+年龄：<input type="text" [formControl]="ageForm">
+<br>
+<p>年龄：{{ageForm.value}}</p>
+<button (click)="ageChangeFun()">长大18岁</button>
+<hr>
+<!-- 动态表单控件组 -->
+<form [formGroup]="loginForm">
+  <label>
+    账号: <input required type="text" formControlName="userName">
+  </label>
+  <br>
+  <label>
+    密码: <input type="password" formControlName="password">
+  </label>
+  <br>
+  <button (click)="subFormFun()">提交</button>
+</form>

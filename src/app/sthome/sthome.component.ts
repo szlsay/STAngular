@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-sthome',
@@ -28,7 +29,14 @@ export class STHomeComponent implements OnInit {
   colors:Array<string> = [ 'red', 'blue', 'yellow', 'green' ];
   type:Number = 4
 
-  titlemodel:String = ''
+  titlemodel: String = ''
+  
+  ageForm:FormControl = new FormControl(6);
+  loginForm:FormGroup = new FormGroup({
+    userName: new FormControl(''),
+    password: new FormControl(''),
+  });
+
   constructor() { }
 
   ngOnInit(): void {
@@ -49,5 +57,13 @@ export class STHomeComponent implements OnInit {
 
   getUserName(v:string){
     console.log(v)
+  }
+
+  ageChangeFun(){
+    this.ageForm.setValue(18)
+  }
+
+  subFormFun(){
+    console.log(this.loginForm.value)
   }
 }
