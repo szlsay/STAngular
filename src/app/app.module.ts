@@ -11,6 +11,14 @@ import { STDetailComponent } from './stdetail/stdetail.component';
 import { TestPipe } from './pipes/test.pipe';
 import { STUserHomeComponent } from './stuser-home/stuser-home.component';
 import { STOrderHomeComponent } from './storder-home/storder-home.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { zh_CN } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+registerLocaleData(zh);
 
 
 @NgModule({
@@ -30,10 +38,12 @@ import { STOrderHomeComponent } from './storder-home/storder-home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   //全局服务
-  providers: [],
+  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   //根组件
   bootstrap: [AppComponent]
 })
