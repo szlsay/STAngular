@@ -2,11 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { STDetailComponent } from './stdetail/stdetail.component';
 import { STHomeComponent } from './sthome/sthome.component';
+import { STLayoutComponent } from './stlayout/stlayout.component';
 import { STListComponent } from './stlist/stlist.component';
 import { STOrderHomeComponent } from './storder-home/storder-home.component';
 import { STUserHomeComponent } from './stuser-home/stuser-home.component';
 
 const routes: Routes = [
+  {
+    path:'layout',
+    component:STLayoutComponent
+  },
   {
     path:'list',
     component:STListComponent

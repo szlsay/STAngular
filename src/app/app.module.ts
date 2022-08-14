@@ -17,6 +17,11 @@ import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { STLayoutComponent } from './stlayout/stlayout.component';
+
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 
 registerLocaleData(zh);
 
@@ -31,7 +36,8 @@ registerLocaleData(zh);
     STDetailComponent,
     TestPipe,
     STUserHomeComponent,
-    STOrderHomeComponent
+    STOrderHomeComponent,
+    STLayoutComponent
   ],
   //引入模块需要的类
   imports: [
@@ -40,7 +46,10 @@ registerLocaleData(zh);
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NzLayoutModule,
+    NzMenuModule,
+    NzBreadCrumbModule
   ],
   //全局服务
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
