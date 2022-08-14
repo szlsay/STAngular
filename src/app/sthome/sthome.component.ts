@@ -5,7 +5,8 @@ import { ListService } from '../serves/list.service';
 @Component({
   selector: 'app-sthome',
   templateUrl: './sthome.component.html',
-  styleUrls: ['./sthome.component.less']
+  styleUrls: ['./sthome.component.less'],
+  providers: [ListService]
 })
 export class STHomeComponent implements OnInit {
   @Input()
