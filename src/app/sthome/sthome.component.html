@@ -106,3 +106,38 @@
   <br>
   <button (click)="subFormFun()">提交</button>
 </form>
+<hr>
+
+<!-- 表单验证 -->
+<form  action="">
+  账号：<input required #nameInp="ngModel" type="text" [(ngModel)]="fromData.name" name="userName">
+  <span *ngIf="!nameInp.valid">请输入账号</span>
+  <br>
+  密码：<input required  #pasInp="ngModel" type="text" [(ngModel)]="fromData.password" name="password">
+  <span>验证结果：{{pasInp.valid }}</span>
+  <br>
+  <button (click)="subBtnFun(nameInp)">提交</button>
+</form>
+<hr>
+<!-- 自定义表单验证 -->
+<form [formGroup]="valiDataForm">
+  <label>
+    账号: <input required type="text" formControlName="userName">
+  </label>
+  <p *ngIf="valiDataForm.get('userName')?.errors?.['required']">请输入账号</p>
+  <p *ngIf="valiDataForm.get('userName')?.errors?.['minlength']?.requiredLength
+  ||valiDataForm.get('userName')?.errors?.['maxlength']?.requiredLength">账号长度在6-18位之间</p>
+  <br>
+  <label>
+    密码: <input type="password" formControlName="password">
+  </label>
+  <p *ngIf="valiDataForm.get('password')?.errors?.['msg']">{{valiDataForm.get('password')?.errors?.['msg']}}</p>
+  <br>
+  <label>
+    手机号: <input type="text" formControlName="phone">
+  </label>
+  <p *ngIf="valiDataForm.get('phone')?.errors?.['msg']">{{valiDataForm.get('phone')?.errors?.['msg']}}</p>
+  <br>
+  <button (click)="subvaliDataFormFun()">提交</button>
+</form>
+<hr>

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sthome',
@@ -37,7 +37,40 @@ export class STHomeComponent implements OnInit {
     password: new FormControl(''),
   });
 
-  constructor() { }
+  fromData={
+    name:'',
+    password:''
+  };
+
+  constructor(private fbCustom: FormBuilder) { }
+  valiDataForm:FormGroup = this.fbCustom.group({
+    userName: ['', [Validators.required,
+      Validators.maxLength(18),
+      Validators.minLength(6)]],
+    password: ['', [this.passWordVal]],
+    phone: ['', [Validators.required,this.phoneVal],]
+  });
+
+  passWordVal(password: FormControl):object{
+    let value = password.value || '';
+    if(!value){
+      return {msg:'请输入密码'}
+    }else{
+      const valid = value.match(/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/);
+      return valid?{}:{msg:'密码至少包含 数字和英文，长度6-20'}
+    }
+  }
+
+  phoneVal(phone: FormControl): object {
+    const value = phone.value || '';
+    if(!value) return  {msg:'请输入手机号'}
+    const valid =  value.match(/[0-9]{11}/);
+    return valid ? {} :{msg:'手机号必须是11位数字'}
+  }
+
+  subvaliDataFormFun(){
+    console.log(this.valiDataForm.get('userName'));
+  }
 
   ngOnInit(): void {
   }
@@ -65,5 +98,9 @@ export class STHomeComponent implements OnInit {
 
   subFormFun(){
     console.log(this.loginForm.value)
+  }
+
+  subBtnFun(obj:any){
+    console.log(obj); 
   }
 }
