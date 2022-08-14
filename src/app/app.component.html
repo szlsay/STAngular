@@ -1,1 +1,17 @@
-<app-stlogin></app-stlogin>
+<!-- <app-stlogin></app-stlogin> -->
+
+<a [routerLink]="['/home']" routerLinkActive="router-link-active">首页</a>
+<br>
+<a [routerLink]="['/list']" routerLinkActive="router-link-active" >列表</a>
+<br>
+<a [routerLink]="['/detail/999']" [queryParams]="{name:'tom'}" routerLinkActive="router-link-active" >详情-queryParams</a>
+<br>
+<a [routerLink]="['/detail', '123']" routerLinkActive="router-link-active" >详情</a>
+<br>
+
+<a [routerLink]="['/home/user']" routerLinkActive="router-link-active">用户</a>
+<br>
+<a [routerLink]="['/home/order']" routerLinkActive="router-link-active" >订单</a>
+<br>
+<!-- 路由组件渲染的位置 -->
+<router-outlet></router-outlet>
