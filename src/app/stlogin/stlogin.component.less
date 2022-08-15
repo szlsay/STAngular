@@ -1,11 +1,11 @@
-// :host{
-//   background-color: #1891ff;
-//   height: 100vh;
-//   width: 100vw;
-//   position: fixed;
-//   top:0;
-//   left: 0;
-// }
+:host{
+  background-color: #1891ff;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top:0;
+  left: 0;
+}
 
 .container{
   position: fixed;
@@ -13,22 +13,57 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  width: 160px;
-  height: 180px;
+  width: 540px;
+  height: 360px;
   display: flex;
-  flex-direction: column;
   border-radius: 8px;
-  .title{
-    line-height: 40px;
-    height: 40px;
-    text-align: center;
+  .left {
+    width: 224px;
+    height: 100%;
+    background-color: #ecf5ff;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
   }
-  .form{
-    display: flex;
-    padding: 10px;
-    padding-top: 0px;
+
+  .right{
     flex: 1;
-    flex-direction: column;
-    justify-content: space-around;
+    height: 100%;
+    padding: 24px 32px 0 32px;
+
+    .login-title{
+      font-size: 13px;
+      font-weight: 600;
+
+      span{
+        font-size: 11px;
+        font-weight: 300;
+      }
+    }
+
+    .login-alert {
+      font-size: 11px;
+      position: absolute;
+      top: 26px;
+      right: 32px;
+    }
+
+    .login-form {
+      width: 100%;
+      margin-top: 52px;
+    }
+
+    .login-form-margin {
+      margin-bottom: 16px;
+    }
+
+    .login-form-forgot {
+      float: right;
+    }
+
+    .login-form-button {
+      width: 100%;
+      height: 36px;
+      font-weight: 700;
+    }
   }
 }

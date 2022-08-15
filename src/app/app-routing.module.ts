@@ -4,10 +4,15 @@ import { STDetailComponent } from './stdetail/stdetail.component';
 import { STHomeComponent } from './sthome/sthome.component';
 import { STLayoutComponent } from './stlayout/stlayout.component';
 import { STListComponent } from './stlist/stlist.component';
+import { STLoginComponent } from './stlogin/stlogin.component';
 import { STOrderHomeComponent } from './storder-home/storder-home.component';
 import { STUserHomeComponent } from './stuser-home/stuser-home.component';
 
 const routes: Routes = [
+  {
+    path:'login',
+    component:STLoginComponent
+  },
   {
     path:'layout',
     component:STLayoutComponent
@@ -33,6 +38,10 @@ const routes: Routes = [
         component: STOrderHomeComponent,
       },
     ]
+  },
+  {
+    path: '**',
+    redirectTo: 'login'
   }
 ];
 
