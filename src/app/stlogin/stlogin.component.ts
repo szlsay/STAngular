@@ -9,7 +9,8 @@ import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms'
 export class STLoginComponent implements OnInit {
   validateForm:FormGroup = new FormGroup({
     userName: new FormControl(''),
-    password: new FormControl('')
+    password: new FormControl(''),
+    remember: new FormControl(true),
   });
 
   submitForm(): void {
