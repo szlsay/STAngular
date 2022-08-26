@@ -1,5 +1,5 @@
 /*
- * @LastEditTime: 2022-08-26 14:25:45
+ * @LastEditTime: 2022-08-26 23:17:07
  */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -34,6 +34,7 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 registerLocaleData(zh);
 
@@ -66,7 +67,10 @@ registerLocaleData(zh);
     NzFormModule,
     NzInputModule,
     NzButtonModule,
-    NzCheckboxModule
+    NzCheckboxModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
+    })
   ],
   //全局服务
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
