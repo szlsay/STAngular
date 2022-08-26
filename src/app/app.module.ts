@@ -1,3 +1,6 @@
+/*
+ * @LastEditTime: 2022-08-26 14:25:45
+ */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -12,6 +15,7 @@ import { STDetailComponent } from './stdetail/stdetail.component';
 import { STUserHomeComponent } from './stuser-home/stuser-home.component';
 import { STOrderHomeComponent } from './storder-home/storder-home.component';
 import { STLayoutComponent } from './stlayout/stlayout.component';
+import { STChartComponent } from './stchart/stchart.component';
 
 import { TestPipe } from './pipes/test.pipe';
 
@@ -44,7 +48,8 @@ registerLocaleData(zh);
     TestPipe,
     STUserHomeComponent,
     STOrderHomeComponent,
-    STLayoutComponent
+    STLayoutComponent,
+    STChartComponent
   ],
   //引入模块需要的类
   imports: [
