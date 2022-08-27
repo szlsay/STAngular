@@ -35,6 +35,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { STChartTitleComponent } from './components/stchart-title/stchart-title.component';
 
 registerLocaleData(zh);
 
@@ -50,7 +51,8 @@ registerLocaleData(zh);
     STUserHomeComponent,
     STOrderHomeComponent,
     STLayoutComponent,
-    STChartComponent
+    STChartComponent,
+    STChartTitleComponent
   ],
   //引入模块需要的类
   imports: [
